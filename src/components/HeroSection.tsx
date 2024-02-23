@@ -17,7 +17,7 @@ export function HeroSection() {
             titleComponent={
               <>
                 <h1 className="text-xl font-semibold text-black dark:text-white">
-                  <TextGenerateEffect words={words} />    <br />
+                  <TextGenerateEffect words={words} /><br />
                   <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                     Elixir Tech Community
                   </span>
