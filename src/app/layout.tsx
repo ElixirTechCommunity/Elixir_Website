@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { fontSans } from './font';
 import './globals.css';
+import { cn } from '@/utils/cn';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from "@/components/Footer";
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -18,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>
+      <body className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}>
         <div className="relative w-full flex items-center justify-center">
           {/* <Navbar /> */}
         </div>
