@@ -3,7 +3,7 @@ import React from 'react';
 import { Spotlight } from '@/components/ui/Spotlight';
 import { Navbar } from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import FeaturedCourses from '@/components/FeaturedCourses';
+import ClubsInformation from '@/components/ClubsInformation';
 import { WhyChooseUs } from '@/components/WhyChooseUs';
 import { MusicSchoolTestimonials } from '@/components/TestimonialCards';
 import UpcomingWebinars from '@/components/UpcomingWebinars';
@@ -14,7 +14,7 @@ export default function Home() {
   return (
       <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
         <HeroSection/>
-        <FeaturedCourses/>
+        <ClubsInformation/>
         <WhyChooseUs/>
         <MusicSchoolTestimonials/>
         <UpcomingWebinars/>
