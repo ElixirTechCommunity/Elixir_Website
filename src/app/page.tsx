@@ -3,7 +3,6 @@ import HeroSection from '@/components/HeroSection';
 import ClubsInformation from '@/components/ClubsInformation';
 import { JoinUs } from '@/components/JoinUs';
 import { TabsDemo } from '@/components/Tabs';
-import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
       <ClubsInformation />
       <TabsDemo />
       <JoinUs />
-      <Footer />
     </main>
   );
 }
