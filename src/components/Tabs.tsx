@@ -67,7 +67,7 @@ export function TabsDemo() {
 const DummyContent = () => {
   return (
     <Image
-      src="/linear.webp"
+      src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=1080&q=75"
       alt="dummy image"
       width="1000"
       height="1000"
