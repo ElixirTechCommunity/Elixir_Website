@@ -67,8 +67,7 @@ export const Header = ({ translate, titleComponent }: any) => {
       style={{
         translateY: translate,
       }}
-      className="div max-w-5xl mx-auto text-center"
-    >
+      className="div max-w-5xl mx-auto text-center mb-20">
       {titleComponent}
     </motion.div>
   );

@@ -4,9 +4,9 @@ import { PinContainer } from "./ui/3d-pin";
 
 export function ClubsInformation() {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center ">
+    <div className="h-[40rem] w-full flex wrap items-center justify-evenly overflow-x-hidden">
        {/* TODO: make this bold and prominent */}
-      <h2>Our Clubs</h2>
+      <h2 className="text-4xl font-semibold text-black dark:text-white">Our Clubs</h2>
       <PinContainer
         title="GeeksforGeeks"
         // TODO:
@@ -14,7 +14,7 @@ export function ClubsInformation() {
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
+            GeeksforGeeks ABESEC
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">
@@ -25,13 +25,13 @@ export function ClubsInformation() {
         </div>
       </PinContainer>
       <PinContainer
-        title="GeeksforGeeks"
-        // TODO:
+        title="GDSC"
+        // TODO: add links to instagram
         href="add instagram of club"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
+            Google Developer Student Club
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">
@@ -42,13 +42,13 @@ export function ClubsInformation() {
         </div>
       </PinContainer>
       <PinContainer
-        title="GeeksforGeeks"
+        title="Codechef"
         // TODO:
         href="add instagram of club"
       >
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Aceternity UI
+            Codechef ABESEC
           </h3>
           <div className="text-base !m-0 !p-0 font-normal">
             <span className="text-slate-500 ">
