@@ -1,27 +1,53 @@
-"use client";
 import React from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
-function Events() {
-  return (
-    <div className="h-[100vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-          Events Page Coming Soon
-        </h1>
-        <p></p>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          If you're interested in getting involved with the community, please enter your email below and we'll keep you updated with the latest news and events.
-        </p>
-        <input
-          type="text"
-          placeholder="hi@elixir"
-          className="p-2 rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
-        />
-      </div>
-      <BackgroundBeams />
-    </div>
-  );
+export default function Events() {
+    return (
+        <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02] py-24 grid grid-flow-col gap-5">
+            <CardContainer className="inter-var">
+                <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                    <CardItem
+                        translateZ="50"
+                        className="text-xl font-bold text-neutral-600 dark:text-white"
+                    >
+                        Make things float in air
+                    </CardItem>
+                    <CardItem
+                        as="p"
+                        translateZ="60"
+                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                    >
+                        Hover over this card to unleash the power of CSS
+                        perspective
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-60 mt-4">
+                        <Image
+                            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            height="1000"
+                            width="1000"
+                            className="h-auto w-full object-contain rounded-xl group-hover/card:shadow-xl"
+                            alt="thumbnail"
+                        />
+                    </CardItem>
+                    {/* <div className="flex justify-between items-center mt-20">
+                        <CardItem
+                            translateZ={20}
+                            as="button"
+                            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                        >
+                            Try now →
+                        </CardItem>
+                        <CardItem
+                            translateZ={20}
+                            as="button"
+                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                        >
+                            Sign up
+                        </CardItem>
+                    </div> */}
+                </CardBody>
+            </CardContainer>
+        </main>
+    );
 }
-
-export default Events;
