@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Meteors
-} from "@/components/ui/meteors";
+import { Meteors } from "@/components/ui/meteors";
 
 function Card({
   title,
@@ -52,7 +50,7 @@ function Card({
         </a>
 
         {/* Meaty part - Meteor effect */}
-        <Meteors number={20} />
+        <Meteors number={40} />
       </div>
     </div>
   );
@@ -60,30 +58,33 @@ function Card({
 
 function Notes() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto max-w-screen-lg place-items-center min-h-screen">
-      <Card
-        title="First Year"
-        text="Text for card 1."
-        link="https://drive.google.com/drive/folders/1TTjSSShjK5nrUURnSIVOK1wnO-CBCp7R"
-      />
-      <Card
-        title="Second Year"
-        text="Text for card 2."
-        link="https://drive.google.com/drive/folders/1c2gZ8TJ53P3ecNETMB403lTueQY5pEHU"
-      />
-      <Card
-        title="Third Year"
-        text="Text for card 3."
-        link="https://drive.google.com/drive/folders/1jUHgBPZdN5V5Am6gEHpHNTc4XWIQgC_W"
-      />
-      <Card
-        title="Fourth Year"
-        text="Text for card 4."
-        link="https://drive.google.com/drive/folders/1LdrCdkcasmu_qA0vOK-UdI8UeThNhZ2C"
-      />
+    <div>
+      <h1 className="text-4xl font-bold text-center mb-8">Notes</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto max-w-screen-lg place-items-center min-h-screen">
+        <Card
+          title="First Year"
+          text="Text for card 1."
+          link="https://drive.google.com/drive/folders/1TTjSSShjK5nrUURnSIVOK1wnO-CBCp7R"
+        />
+        <Card
+          title="Second Year"
+          text="Text for card 2."
+          link="https://drive.google.com/drive/folders/1c2gZ8TJ53P3ecNETMB403lTueQY5pEHU"
+        />
+        <Card
+          title="Third Year"
+          text="Text for card 3."
+          link="https://drive.google.com/drive/folders/1jUHgBPZdN5V5Am6gEHpHNTc4XWIQgC_W"
+        />
+        <Card
+          title="Fourth Year"
+          text="Text for card 4."
+          link="https://drive.google.com/drive/folders/1LdrCdkcasmu_qA0vOK-UdI8UeThNhZ2C"
+        />
+      </div>
     </div>
   );
 }
-
 
 export default Notes;
