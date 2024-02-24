@@ -28,7 +28,7 @@ export default function Events(): JSX.Element {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pb-24 max-w-[70dvw] mx-auto">
                 {events.map((event: any) => (
                     <EventsCard
-                        key={event.name}
+                        key={event.id}
                         title={event.name}
                         description={event.event_summary}
                         eventName={event.name}
