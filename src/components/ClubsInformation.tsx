@@ -6,7 +6,7 @@ export function ClubsInformation() {
   return (
     <div className="h-[40rem] w-full flex wrap items-center justify-evenly overflow-x-hidden">
        {/* TODO: make this bold and prominent */}
-      <h2 className="text-4xl font-semibold text-black dark:text-white">Our Clubs</h2>
+      <h2 className="text-4xl font-semibold text-black dark:text-white ">Our Clubs</h2>
       <PinContainer
         title="GeeksforGeeks"
         // TODO:

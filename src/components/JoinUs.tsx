@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTheme } from "next-themes";
 import { AnimatedTooltip } from './ui/animated-tooltip';
 import { WavyBackground } from './ui/wavy-background';
 
@@ -35,9 +36,10 @@ const instructors = [
 ];
 
 export function JoinUs() {
+  const { theme } = useTheme();
   return (
     <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
-      <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
+      <WavyBackground backgroundFill={theme==='dark'? '':"white" } containerClassName="bg-white" className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
         <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">
           Join the Community
         </h2>

@@ -1,27 +1,45 @@
 "use client";
-import React from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import EventsCard from "@/components/EventsCard3D";
 
-function Events() {
-  return (
-    <div className="h-[100vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-          Events Page Coming Soon
-        </h1>
-        <p></p>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          If you're interested in getting involved with the community, please enter your email below and we'll keep you updated with the latest news and events.
-        </p>
-        <input
-          type="text"
-          placeholder="hi@elixir"
-          className="p-2 rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
-        />
-      </div>
-      <BackgroundBeams />
-    </div>
-  );
+export default function Events(): JSX.Element {
+    const [events, setEvents] = useState([]);
+    const fetchevents = async () => {
+        try {
+            const events = await axios.get(
+                "https://elixir-backendv2.vercel.app/events/?format=json"
+            );
+            setEvents(events.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    useEffect(() => {
+        fetchevents();
+    }, []);
+
+    console.log(events);
+
+    return (
+        <main className="relative antialiased">
+            <h1 className="text-6xl font-bold text-center m-20">Events</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pb-24 max-w-[70dvw] mx-auto">
+                {events.map((event: any) => (
+                    <EventsCard
+                        key={event.id}
+                        title={event.name}
+                        description={event.event_summary}
+                        eventName={event.name}
+                        eventImage={event.img_link}
+                        clubName={event.club}
+                        clubImage="https://via.placeholder.com/25"
+                        deadline={event.date}
+                        formLink={event.form_link}
+                    />
+                ))}
+            </div>
+        </main>
+    );
 }
-
-export default Events;
