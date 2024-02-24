@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Meteors } from "@/components/ui/meteors";
 
@@ -12,7 +13,7 @@ function Card({
   link: string;
 }) {
   return (
-    <div className="relative w-full sm:max-w-sm sm:min-w-[20rem] h-[300px]">
+    <div className="relative w-full h-[300px]">
       <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
       <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
         <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
@@ -58,10 +59,9 @@ function Card({
 
 function Notes() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-center mb-8">Notes</h1>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-auto max-w-screen-lg place-items-center min-h-screen">
+    <div className="h-full p-2 ">
+      <h1 className="text-6xl font-bold text-center m-8">Notes</h1>
+      <div className="p-8 grid gap-8  md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-screen-lg mx-auto">
         <Card
           title="First Year"
           text="Text for card 1."
