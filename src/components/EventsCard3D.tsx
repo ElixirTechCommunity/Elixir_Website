@@ -1,6 +1,7 @@
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import { IconClock } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface EventsCardProps {
     title: string;
@@ -9,7 +10,8 @@ export interface EventsCardProps {
     eventImage: string;
     clubName: string;
     clubImage: string;
-    deadline: string;
+    deadline: Date | string;
+    formLink: string;
     isOver: boolean;
 }
 
@@ -21,11 +23,12 @@ export default function EventsCard({
     clubName,
     clubImage,
     deadline,
+    formLink,
     isOver,
 }: EventsCardProps): JSX.Element {
     return (
         <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 flex flex-col relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[25rem] h-auto rounded-xl p-6 border  ">
+            <CardBody className="bg-gray-50 flex flex-col min-h-96 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-background dark:border-white/[0.2] border-black/[0.1] w-auto h-auto sm:max-w-[25rem] rounded-xl p-6 border  ">
                 <div className="flex justify-between items-center">
                     <CardItem
                         translateZ="50"
@@ -69,19 +72,21 @@ export default function EventsCard({
                 <div className="flex justify-between items-center mt-5">
                     <CardItem
                         translateZ={20}
-                        as="button"
                         className="px-4 py-2 flex items-center gap-2 rounded-xl text-xs font-normal dark:text-white"
                     >
                         <IconClock size={20} />
-                        <p>{deadline}</p>
+                        <p>{String(deadline)}</p>
                     </CardItem>
                     {isOver ? null : (
-                        <CardItem
-                            translateZ={20}
-                            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                        >
-                            Register
-                        </CardItem>
+                        <Link href={formLink} target="about_blank">
+                            <CardItem
+                                translateZ={20}
+                                as="button"
+                                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                            >
+                                Register
+                            </CardItem>
+                        </Link>
                     )}
                 </div>
             </CardBody>
