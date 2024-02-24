@@ -48,7 +48,7 @@ export const CardContainer = ({
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn('flex items-center justify-center', containerClassName)}
+        className={cn('flex items-stretch justify-center', containerClassName)}
         style={{
           perspective: '1000px',
         }}
@@ -83,7 +83,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        'h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]',
+        'min-h-full w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]',
         className
       )}
     >
@@ -134,7 +134,7 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn(
-        'w-fit transition duration-200 ease-linear h-full',
+        'w-fit transition duration-200 ease-linear',
         className
       )}
       {...rest}
