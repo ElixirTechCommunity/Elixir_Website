@@ -4,15 +4,16 @@ import { PinContainer } from "./ui/3d-pin";
 
 export function ClubsInformation() {
   return (
-    <div className="h-[40rem] w-full flex wrap items-center justify-evenly overflow-x-hidden">
+    <div className="sm:h-[40rem] w-full flex-col sm:flex-row flex wrap items-evenly justify-center overflow-hidden" >
        {/* TODO: make this bold and prominent */}
-      <h2 className="text-4xl font-semibold text-black dark:text-white ">Our Clubs</h2>
+      <h2 className="text-4xl font-semibold text-black dark:text-white text-center">Our Clubs</h2>
+  
       <PinContainer
         title="GeeksforGeeks"
         // TODO:
         href="add instagram of club"
       >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+        <div className="flex basis-full flex-col p-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
             GeeksforGeeks ABESEC
           </h3>
