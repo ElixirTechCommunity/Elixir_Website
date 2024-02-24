@@ -1,56 +1,60 @@
 "use client";
 import React from "react";
-import { useTheme } from "next-themes";
-import { AnimatedTooltip } from './ui/animated-tooltip';
-import { WavyBackground } from './ui/wavy-background';
+import { Boxes } from "./ui/background-boxes";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
-// Updated data to represent music school instructors
-const instructors = [
-  {
-    id: 1,
-    name: 'Elena Briggs',
-    designation: 'Vocal Coach',
-    image:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60',
-  }, {
-    id: 2,
-    name: 'Marcus Reid',
-    designation: 'Guitar Instructor',
-    image:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80',
-  },
-  {
-    id: 3,
-    name: 'Julia Zhang',
-    designation: 'Piano Teacher',
-    image:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
-  },
-  {
-    id: 4,
-    name: 'Andre Gomez',
-    designation: 'Drumming Expert',
-    image:
-      'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
-  },
-];
-
-export function JoinUs() {
-  const { theme } = useTheme();
+function JoinCommunity() {
+  const words = [
+    {
+      text: "Join",
+    },
+    {
+      text: "the",
+    },
+    {
+      text: "Community",
+    },
+    {
+      text: "of",
+    },
+    {
+      text: "Developers.",
+      className: "text-indigo-500 dark:text-indigo-500",
+    },
+  ];
   return (
-    <div className="relative h-[40rem] overflow-hidden flex items-center justify-center">
-      <WavyBackground backgroundFill={theme==='dark'? '':"white" } containerClassName="bg-white" className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
-        <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">
-          Join the Community
-        </h2>
-        <p className="text-base md:text-lg text-white text-center mb-4">
-          Connect with working professionals making it big in the next big thing.
-        </p>
-        {/* AnimatedTooltip integration */}
-        <div className="flex flex-row items-center justify-center mb-10 w-full">
-          <AnimatedTooltip items={instructors} />
-        </div>
-      </WavyBackground>
+    <div className="z-20 flex flex-col items-center justify-center h-[40rem]  ">
+      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+        You learn more in a community then you do on your own.
+      </p>
+      <TypewriterEffectSmooth words={words} />
+      {/* TODO: add hover effect to buttons */}
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+        <a href="/participate">
+          <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+            Join now
+          </button>
+        </a>
+        <a href="/events">
+          <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+            Past Events
+          </button>
+        </a>
+      </div>
     </div>
   );
 }
+
+
+export function JoinUs() {
+  return (
+    <div className="p-[6rem]">
+      <div className="h-96  relative w-full overflow-hidden bg-background flex flex-col items-center justify-center rounded-lg">
+        <div className="absolute inset-0 w-full h-full bg-background z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+        <JoinCommunity />
+        <Boxes />
+      </div>
+    </div>
+  );
+}
+
