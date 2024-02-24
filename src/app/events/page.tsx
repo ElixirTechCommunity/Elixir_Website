@@ -20,12 +20,10 @@ export default function Events(): JSX.Element {
         fetchevents();
     }, []);
 
-    console.log(events);
-
     return (
         <main className="relative antialiased">
             <h1 className="text-6xl font-bold text-center m-20">Events</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pb-24 max-w-[70dvw] mx-auto">
+            <div className="flex flex-wrap sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pb-24 max-w-[70dvw] mx-auto">
                 {events.map((event: any) => (
                     <EventsCard
                         key={event.id}
