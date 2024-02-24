@@ -3,54 +3,44 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs";
 
-export function TabsDemo() {
+export function ElixirTabs() {
   const tabs = [
     {
-      title: "Product",
-      value: "product",
+      title: "Event",
+      value: "event",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Product Tab</p>
+          <p>Recent Events</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Services",
-      value: "services",
+      title: "Notes",
+      value: "notes",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Services tab</p>
+          <p>Notes</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Playground",
-      value: "playground",
+      title: "Community",
+      value: "community",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Playground tab</p>
+          <p>Join the Community</p>
           <DummyContent />
         </div>
       ),
     },
     {
-      title: "Content",
-      value: "content",
+      title: "Mentorship",
+      value: "mentorship",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Content tab</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
-      title: "Random",
-      value: "random",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p>Random tab</p>
+          <p>Become a mentee or be a mentor</p>
           <DummyContent />
         </div>
       ),

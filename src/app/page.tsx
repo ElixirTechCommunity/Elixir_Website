@@ -2,14 +2,14 @@ import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ClubsInformation from '@/components/ClubsInformation';
 import { JoinUs } from '@/components/JoinUs';
-import { TabsDemo } from '@/components/Tabs';
+import { ElixirTabs } from '@/components/ElixirTabs';
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
       <ClubsInformation />
-      <TabsDemo />
+      <ElixirTabs />
       <JoinUs />
     </main>
   );
