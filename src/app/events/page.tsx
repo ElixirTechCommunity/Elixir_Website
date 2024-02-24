@@ -21,10 +21,11 @@ export default function Events(): JSX.Element {
     }, []);
 
     console.log(events);
-    
+
     return (
-        <main className="min-h-screen relative antialiased bg-grid-slate-100 dark:bg-grid-white/[0.02]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pt-52 pb-24 max-w-[70dvw] mx-auto">
+        <main className="relative antialiased">
+            <h1 className="text-6xl font-bold text-center m-20">Events</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-stretch gap-10 pb-24 max-w-[70dvw] mx-auto">
                 {events.map((event: any) => (
                     <EventsCard
                         key={event.name}
@@ -36,7 +37,6 @@ export default function Events(): JSX.Element {
                         clubImage="https://via.placeholder.com/25"
                         deadline={event.date}
                         formLink={event.form_link}
-                        isOver={false}
                     />
                 ))}
             </div>

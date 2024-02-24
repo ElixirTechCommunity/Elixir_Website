@@ -12,7 +12,12 @@ export interface EventsCardProps {
     clubImage: string;
     deadline: Date | string;
     formLink: string;
-    isOver: boolean;
+}
+
+function isOver(deadline: Date | string): boolean {
+    const eventDate = new Date(deadline);
+    const currentDate = new Date();
+    return currentDate > eventDate;
 }
 
 export default function EventsCard({
@@ -24,7 +29,6 @@ export default function EventsCard({
     clubImage,
     deadline,
     formLink,
-    isOver,
 }: EventsCardProps): JSX.Element {
     return (
         <CardContainer className="inter-var">
@@ -77,7 +81,7 @@ export default function EventsCard({
                         <IconClock size={20} />
                         <p>{String(deadline)}</p>
                     </CardItem>
-                    {isOver ? null : (
+                    {isOver(deadline) ? null : (
                         <Link href={formLink} target="about_blank">
                             <CardItem
                                 translateZ={20}
