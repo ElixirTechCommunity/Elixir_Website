@@ -20,8 +20,6 @@ export default function Events(): JSX.Element {
         fetchevents();
     }, []);
 
-    console.log(events);
-
     return (
         <main className="relative antialiased">
             <h1 className="text-6xl font-bold text-center m-20">Events</h1>
