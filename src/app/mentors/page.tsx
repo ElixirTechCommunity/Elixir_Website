@@ -31,7 +31,7 @@ function Participate() {
   }
   return (
     <div className="w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="h-auto w-full bg-black flex flex-col gap-[3vw] items-center justify-center overflow-hidden rounded-md m-[2vw]">
+      <div className="h-auto w-full flex flex-col gap-[3vw] items-center justify-center overflow-hidden rounded-md m-[2vw]">
         <MentorHeading/>
         <div className="text-white">
         <div className="flex flex-row gap-2 justify-center items-center rounded-full relative">
