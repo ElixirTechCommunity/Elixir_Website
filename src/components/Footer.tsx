@@ -1,88 +1,35 @@
 import React from 'react';
 
-export function Footer() {
+export const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div>
-          <h2 className="text-white text-lg font-semibold mb-4">About Us</h2>
-          <p className="mb-4">
-            Music School is a premier institution dedicated to teaching the art
-            and science of music. We nurture talent from the ground up,
-            fostering a vibrant community of musicians.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-white text-lg font-semibold mb-4">Quick Links</h2>
-          <ul>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Home
+    <footer className="bg-cover bg-center py-16" style={{ backgroundImage: "url('../../public/footer_rays.png')" }}>
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-1">
+            <h2 className="dark:text-white light:text-black text-lg font-semibold mb-4">About Us</h2>
+            <p className="dark:text-white light:text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non feugiat elit. Cras in ex ut elit hendrerit efficitur.</p>
+          </div>
+          <div className="col-span-1">
+            <h2 className="dark:text-white light:text-black text-lg font-semibold mb-4">Contact Us</h2>
+            <p className="dark:text-white light:text-black">add gmail</p>
+          </div>
+          <div className="col-span-1">
+            <h2 className="dark:text-white light:text-black text-lg font-semibold mb-4">Follow Us</h2>
+            <div className="flex items-center space-x-4">
+              <a href="#" className="text-gray-400 hover:text-indigo-600 dark:text-white light:text-black">
+                 Twitter
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                About
+              <a href="#" className="text-gray-400 hover:text-indigo-600 dark:text-white light:text-black">
+                Facebook
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Courses
+              <a href="#" className="text-gray-400 hover:text-indigo-600 dark:text-white light:text-black">
+                Instagram
               </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-white text-lg font-semibold mb-4">Follow Us</h2>
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Facebook
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Instagram
-            </a>
+            </div>
           </div>
         </div>
-        <div>
-          <h2 className="text-white text-lg font-semibold mb-4">Contact Us</h2>
-          <p>New Delhi, India</p>
-          <p>Delhi 10001</p>
-          <p>Email: info@musicschool.com</p>
-          <p>Phone: (123) 456-7890</p>
-        </div>
       </div>
-      <p className="text-center text-xs sm:text-sm md:text-base pt-8">
-        © 2024 Music School. All rights reserved.
-      </p>
     </footer>
   );
-}
+};
+
