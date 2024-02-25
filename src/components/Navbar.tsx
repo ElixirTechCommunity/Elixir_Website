@@ -6,7 +6,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="flex justify-center items-center mt-5 ">
       <div className="max-w-6x1 rounded-2xl overflow-hidden shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
-        <div className="py-6  px-4 flex justify-between items-center space-x-12">
+        <div className="py-4  px-4 flex justify-between items-center space-x-12">
           <a href="#">
             {/* TODO: replace with elixir logo */}
             <svg
