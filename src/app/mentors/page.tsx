@@ -13,6 +13,8 @@ function Participate() {
   const techFields=["Java","Python","C","Game Dev","Data Science","Frontend","React","Open Source","Backend","Devops","Web3","Linux","Backend","CyberSec","Graphics"]
   const [tech,selectedTech]=useState("");
   const [mentors, setMentors] = useState(mentorData);
+  const [input,setInput]=useState("");
+  const [inputClick,setInputClick]=useState(false);
 //   useEffect(()=>{
 //       axios
 //       .get("https://mentor-api-30dc.onrender.com/member")
@@ -24,10 +26,19 @@ function Participate() {
 //       })
 //     },[])
 //   console.log(mentors)
+  const searchMentors=(e:any)=>{
+    setInput(e.target.value);
+    selectedTech("")
+  }
   const categorize=(e: any)=>{
     const target = e.target as Element;
     const value = target.innerHTML;
     selectedTech(value);
+    setInput("")
+  }
+  const loadMentor=()=>{
+    setInputClick(true);
+    console.log(input)
   }
   return (
     <div className="w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
@@ -38,11 +49,12 @@ function Participate() {
                   <input
                     type="text"
                     className="bg-white text-black font-semibold md:h-10 h-8 md:min-w-[30rem] min-w-[10rem] rounded-full px-4 md:py-4 py-[1.2rem] outline-black-200"
-                    placeholder="Search your mentors or categorize"
+                    placeholder="Search or categorize mentors"
+                    onChange={searchMentors}
                   ></input>
-                  <div className="absolute right-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:bg-[#490669] flex flex-row gap-2 justify-center items-center md:py-1 p-1 md:px-2 rounded-full">      
+                  <button className="absolute right-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:bg-[#490669] flex flex-row gap-2 justify-center items-center md:py-1 p-1 md:px-2 rounded-full" onClick={loadMentor}>      
                     <span className="md:inline hidden text-white font-semibold"><FaSearch color="white" className="text-lg" /></span>
-                  </div>
+                  </button>
               </div>
         </div>
         <div className="grid gap-5 grid-cols-7 grid-rows-3">
@@ -56,19 +68,35 @@ function Participate() {
         </div>
         <div className="grid gap-3 grid-cols-3 grid-rows-auto">
           {mentorData.map((mentor:any)=>{
-                if(mentor.tech.split(",").includes(tech)){
-                    return(
-                        <MentorCard3D
-                            key={mentor.id}
-                            firstname={mentor.firstname}
-                            lastname={mentor.lastname}
-                            tech={mentor.tech}
-                            about={mentor.about}
-                            discord={mentor.discord}
-                            linkedin={mentor.linkedin}
-                        />
-                    )
+                if(inputClick){
+                    if(mentor.tech==input){
+                        return(
+                            <MentorCard3D
+                                key={mentor.id}
+                                firstname={mentor.firstname}
+                                lastname={mentor.lastname}
+                                tech={mentor.tech}
+                                about={mentor.about}
+                                discord={mentor.discord}
+                                linkedin={mentor.linkedin}
+                            />
+                        ) 
+                    }
                 }
+                
+                    if(mentor.tech.split(",").includes(tech)){
+                        return(
+                            <MentorCard3D
+                                key={mentor.id}
+                                firstname={mentor.firstname}
+                                lastname={mentor.lastname}
+                                tech={mentor.tech}
+                                about={mentor.about}
+                                discord={mentor.discord}
+                                linkedin={mentor.linkedin}
+                            />
+                        )
+                    }
             }
             )} 
         </div>
@@ -222,7 +250,7 @@ const mentorData=[
       "id": "23c7f082-5570-4f51-92d1-ba0cdfae4fdf",
       "firstname": "Ansh",
       "lastname": "Shukla",
-      "tech": "",
+      "tech": "Graphics",
       "about": "I paly football in my freetime",
       "discord": "ansh.dis",
       "linkedin": "ansh.link",
