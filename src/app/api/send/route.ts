@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       from: "Message <onboarding@resend.dev>",
-      to: ["meowmeow@gmail.com"],
+      to: ["briheetyadav@gmail.com"],
       subject: `New message from ${mail_vals.from_name}`,
       html: `<p>Hi!<br>Name: ${mail_vals.from_name},<br>Email: ${mail_vals.reply_to}<br>Message: ${mail_vals.message}</p>`,
     }),
