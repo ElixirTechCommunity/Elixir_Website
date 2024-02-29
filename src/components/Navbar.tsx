@@ -4,14 +4,14 @@ import { ModeToggle } from "@/components/ui/ThemeToggle";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const HamburgerMenu: React.FC = () => (
-  <div className="absolute top-10 right-30 mt-12 mr-4 w-80 rounded-2xl shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg py-2 z-50">
+  <div className="absolute top-5 right-30 mt-12 mr-4 w-80 rounded-2xl shadow-lg text-white bg-black bg-opacity-20 backdrop-filter backdrop-blur-lg py-2 z-50">
     <div className="dropdown-menu">
       {
-        <div className="flex flex-col justify-center items-center space-y-4">
-          <a href="/notes">Notes</a>
-          <a href="/events">Events</a>
-          <a href="/mentors">Mentorship</a>
-          <a href="/participate">Participate</a>
+        <div className="flex flex-col justify-center items-center space-y-20 dark:text-white light:text-black">
+          <a href="/notes" className="text-xl font-extrabold" style={{ fontSize: "30px" }}>Notes</a>
+          <a href="/events" className="text-xl font-extrabold" style={{ fontSize: "30px" }}>Events</a>
+          <a href="/mentors" className="text-xl font-extrabold" style={{ fontSize: "30px" }}>Mentorship</a>
+          <a href="/participate" className="text-xl font-extrabold" style={{ fontSize: "30px" }}>Participate</a>
 
           <a href="#">
             <svg
@@ -30,7 +30,7 @@ const HamburgerMenu: React.FC = () => (
           </a>
           <a href="#">
             <svg
-              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
+              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -70,15 +70,14 @@ export const Navbar: React.FC = () => {
     <div
       style={{
         position: "sticky",
-        top: 0,
+        top: 10,
         zIndex: 1000,
       }}
     >
       <nav className="flex justify-center items-center mt-5">
-        <div className="max-w-6x1 rounded-2xl overflow-hidden shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+        <div className="max-w-6x1 rounded-2xl overflow-hidden shadow-lg text-white bg-black bg-opacity-20 backdrop-filter backdrop-blur-lg">
           <div className="py-4  px-4 flex justify-between items-center space-x-12">
             <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-              {/* Hamburger icon */}
               <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
                 <path
                   fillRule="evenodd"
@@ -89,7 +88,7 @@ export const Navbar: React.FC = () => {
             </button>
             <div className="font-m items-center md:hidden ">
               <a href="#">
-                <h1 className="font-bold text-2xl">Elixir</h1>
+                <h1 className="font-bold text-2xl ">Elixir</h1>
               </a>
             </div>
 
@@ -114,16 +113,16 @@ export const Navbar: React.FC = () => {
             </a>
 
             <div className="font-m items-center hidden md:flex space-x-12">
-              <a href="/notes">Notes</a>
-              <a href="/events">Events</a>
-              <a href="/mentors">Mentorship</a>
-              <a href="/participate">Participate</a>
+              <a href="/notes" className="dark:text-white light:text-black">Notes</a>
+              <a href="/events" className="dark:text-white light:text-black">Events</a>
+              <a href="/mentors" className="dark:text-white light:text-black">Mentorship</a>
+              <a href="/participate" className="dark:text-white light:text-black">Participate</a>
             </div>
 
             <div className="font-m items-center hidden md:flex space-x-12">
               <a href="#">
                 <svg
-                  className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
+                  className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
