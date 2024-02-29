@@ -4,7 +4,7 @@ import { ModeToggle } from "@/components/ui/ThemeToggle";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const HamburgerMenu: React.FC = () => (
-  <div className="absolute top-5 right-30 mt-12 mr-4 w-80 rounded-2xl shadow-lg text-white bg-black bg-opacity-20 backdrop-filter backdrop-blur-lg py-2 z-50">
+  <div className="absolute top-10 right-30 mt-12 mr-4 w-80 rounded-2xl shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg py-2 z-50">
     <div className="dropdown-menu">
       {
         <div className="flex flex-col justify-center items-center space-y-4">
@@ -31,7 +31,7 @@ const HamburgerMenu: React.FC = () => (
           </a>
           <a href="#">
             <svg
-              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125"
+              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
               width="24"
               height="24"
               viewBox="0 0 24 24"
