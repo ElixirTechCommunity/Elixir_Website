@@ -10,6 +10,7 @@ const HamburgerMenu: React.FC = () => (
                 <a href="/notes">Notes</a>
                 <a href="/events">Events</a>
                 <a href="/mentors">Mentorship</a>
+                <a href="/careers">Careers</a>
                 <a href="/participate">Participate</a>
 
                 <a href="#">
@@ -112,6 +113,7 @@ export const Navbar: React.FC = () => {
             <a href="/notes">Notes</a>
             <a href="/events">Events</a>
             <a href="/mentors">Mentorship</a>
+            <a href="/careers">Careers</a>
             <a href="/participate">Participate</a>
           </div>
 
