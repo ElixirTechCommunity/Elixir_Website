@@ -47,18 +47,18 @@ function Careers() {
             className=""
             backgroundFill={theme === "light" ? "white" : `#0a0a0a`}
           >
-            <h1 className="text-white font-4xl text-6xl md:text-8xl text-center font-bold -mt-20">
+            <h1 className="dark:text-white text-[#06348a] font-4xl text-[5.5rem] md:text-8xl text-center font-bold -mt-20">
               Careers
             </h1>
-            <h1 className="md:mt-6 mt-2 md:text-2xl text-lg text-center text-white font-semibold">
+            <h1 className="md:mt-1 md:text-2xl text-2xl text-center text-[#042c75] dark:text-white font-semibold">
               We find it, You hack it
             </h1>
           </WavyBackground>
-          <div className="md:-mt-60 -mt-[20rem] w-fit mx-auto flex flex-col items-center px-6">
+          <div className="md:-mt-60 -mt-[18rem] w-fit mx-auto flex flex-col items-center px-6">
             <HoverEffect items={careers} />
             <Card
               text="Add new opening"
-              className="mx-4 text-center"
+              className="mx-4 text-center mb-4"
               onClick={handleShowModal}
             >
               <h1>

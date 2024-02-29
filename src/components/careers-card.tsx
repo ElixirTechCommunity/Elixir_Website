@@ -48,7 +48,7 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card link={item.CareerLink} text="Apply">
+          <Card link={item.CareerLink} text="Apply" className="min-h-80">
             <CardImage imageLink={item.image} />
             <CardTitle>{item.name}</CardTitle>
           </Card>
@@ -86,7 +86,7 @@ export const Card = ({
         <Link
           href={link || "#"}
           target="_blank"
-          className="bg-blue-800 w-full text-white text-center font-semibold p-1 rounded-b-xl cursor-pointer"
+          className="bg-blue-800 w-full text-white text-center font-semibold p-1 rounded-full cursor-pointer"
         >
           {text}
         </Link>
@@ -94,7 +94,7 @@ export const Card = ({
       {onClick && (
         <button
           onClick={onClick}
-          className="bg-blue-800 w-full text-white text-center font-semibold p-1 rounded-b-xl cursor-pointer"
+          className="bg-blue-800 w-full text-white text-center font-semibold p-1 rounded-full cursor-pointer"
         >
           {text}
         </button>
