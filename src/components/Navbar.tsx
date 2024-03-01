@@ -5,62 +5,63 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 const HamburgerMenu: React.FC = () => (
   <div className="absolute top-10 right-30 mt-12 mr-4 w-80 rounded-2xl shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg py-2 z-50">
-    <div className="dropdown-menu">{
-              <div className="flex flex-col justify-center items-center space-y-4">
-                <a href="/notes">Notes</a>
-                <a href="/events">Events</a>
-                <a href="/mentors">Mentorship</a>
-                <a href="/careers">Careers</a>
-                <a href="/participate">Participate</a>
+    <div className="dropdown-menu">
+      {
+        <div className="flex flex-col justify-center items-center space-y-4">
+          <a href="/notes">Notes</a>
+          <a href="/events">Events</a>
+          <a href="/mentors">Mentorship</a>
+          <a href="/careers">Careers</a>
+          <a href="/participate">Participate</a>
 
-                <a href="#">
-              <svg
-                className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a href="#">
-              <svg
-                className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" />
-                <path d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" />
-              </svg>
-            </a>
-            <a href="#">
-              <svg
-                className="h-8 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-            </a>
-              </div>
-            }</div>
-
+          <a href="#">
+            <svg
+              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              className="h-6 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+              stroke="currentColor"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <path d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              className="h-8 w-6 transform transition duration-300 hover:text-yellow-400 hover:scale-125 dark:text-white light:text-black"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </div>
+      }
+    </div>
   </div>
 );
 
@@ -70,7 +71,7 @@ export const Navbar: React.FC = () => {
     <nav className="flex justify-center items-center mt-5">
       <div className="max-w-6x1 rounded-2xl overflow-hidden shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
         <div className="py-4  px-4 flex justify-between items-center space-x-12">
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {/* Hamburger icon */}
             <svg fill="currentColor" viewBox="0 0 20 20" className="w-6 h-6">
               <path
@@ -106,9 +107,6 @@ export const Navbar: React.FC = () => {
             </svg>
           </a>
 
-          
-          
-          
           <div className="font-m items-center hidden md:flex space-x-12">
             <a href="/notes">Notes</a>
             <a href="/events">Events</a>
@@ -166,25 +164,11 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:flex space-x-8 items-center">
-        <a href="#">
-          <button className="bg-transparent font-m text-gray-800 py-1 px-3 rounded-lg">
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <ModeToggle />
-            </ThemeProvider>
-          </button>
-        </a>
+      <div className=" ml-2 ">
+        <ModeToggle />
       </div>
 
-      {isOpen && (
-        <HamburgerMenu />
-                      )}
+      {isOpen && <HamburgerMenu />}
     </nav>
-    
   );
 };
