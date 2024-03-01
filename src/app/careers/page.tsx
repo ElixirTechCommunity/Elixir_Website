@@ -45,12 +45,12 @@ function Careers() {
             <h1 className="md:text-7xl text-[5.5rem] lg:text-9xl font-bold text-center dark:text-white text-blue-900 relative z-20">
               Careers
             </h1>
-            <div className="w-[40rem] h-40 relative">
+            <div className="md:w-[40rem] w-[20] flex justify-center h-40 relative">
               {/* Gradients */}
-              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-              <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent darK:via-sky-500 via-blue-900 to-transparent h-[5px] w-1/4 blur-sm" />
-              <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent dark:via-sky-500 via blue-900 to-transparent h-px w-1/4" />
+              <div className="absolute md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+              <div className="absolute md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+              <div className="absolute md:inset-x-60 top-0 bg-gradient-to-r from-transparent darK:via-sky-500 via-blue-900 to-transparent h-[5px] w-1/4 blur-sm" />
+              <div className="absolute md:inset-x-60 top-0 bg-gradient-to-r from-transparent dark:via-sky-500 via blue-900 to-transparent h-px w-1/4" />
 
               {/* Core component */}
               <SparklesCore
@@ -58,12 +58,12 @@ function Careers() {
                 minSize={0.4}
                 maxSize={2}
                 particleDensity={1200}
-                className="w-full h-full"
+                className="md:w-full w-[20rem] h-full"
                 particleColor={theme == "dark" ? "#FFFFFF" : "#3618db"}
               />
 
               {/* Radial Gradient to prevent sharp edges */}
-              <div className="absolute inset-0 w-full h-full dark:bg-[#0a0a0a] bg-white [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+              <div className="absolute md:inset-0 w-full h-full dark:bg-[#0a0a0a] bg-white [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
             </div>
           </div>
 
