@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
+const RESEND_API_KEY = "re_ZfsxS9ZU_AUk9GT9XhwX9bhLufTzBztvy";
 
 export async function POST(request: Request) {
   try {
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: "Message <onboarding@resend.dev>",
-        to: ["briheetyadav@gmail.com"],
+        to: ["techcommunityelixir@gmail.com"],
         subject: `New message from ${mail_vals.from_name}`,
         html: `<p>Hi!<br>Name: ${mail_vals.from_name},<br>Email: ${mail_vals.reply_to}<br>Message: ${mail_vals.message}</p>`,
       }),
