@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
-const RESEND_API_KEY = "re_ZfsxS9ZU_AUk9GT9XhwX9bhLufTzBztvy";
+const RESEND_API_KEY = process.env['RESEND_API_KEY'];
 
 export async function POST(request: Request) {
   try {
