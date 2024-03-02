@@ -108,9 +108,6 @@ const HamburgerMenu: React.FC = () => (
             </svg>
           </a>
         </div>
-      }
-    </div>
-  </div>
 );
 
 export const Navbar: React.FC = () => {
