@@ -41,40 +41,28 @@ function Careers() {
       {showModal && <AddCareerCard handleClose={handleShowModal} />}
       <div className="flex justify-center items-center">
         <div className="w-full relative">
-          <div className="mt-28 h-fit w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <h1 className="md:text-7xl text-[5.5rem] lg:text-9xl font-bold text-center dark:text-white text-blue-900 relative z-20">
+          <div className="mt-24 h-fit w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
+            <div className="text-[5.5rem] font-bold text-center dark:text-white text-blue-900 relative z-20">
               Careers
-            </h1>
-            <div className="md:w-[40rem] w-[20] flex justify-center h-40 relative">
+            </div>
+            <div className="md:w-[30rem] w-[20] flex justify-center h-4 relative">
               {/* Gradients */}
-              <div className="absolute md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-              <div className="absolute md:inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-              <div className="absolute md:inset-x-60 top-0 bg-gradient-to-r from-transparent darK:via-sky-500 via-blue-900 to-transparent h-[5px] w-1/4 blur-sm" />
-              <div className="absolute md:inset-x-60 top-0 bg-gradient-to-r from-transparent dark:via-sky-500 via blue-900 to-transparent h-px w-1/4" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-[2px] w-3/4 blur-sm" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-px w-3/4" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-200 to-transparent h-[5px] w-1/4 blur-sm" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-sky-500 via-sky-800 to-transparent h-px w-1/4" />
 
-              {/* Core component */}
-              <SparklesCore
-                background="transparent"
-                minSize={0.4}
-                maxSize={2}
-                particleDensity={1200}
-                className="md:w-full w-[20rem] h-full"
-                particleColor={theme == "dark" ? "#FFFFFF" : "#3618db"}
-              />
-
-              {/* Radial Gradient to prevent sharp edges */}
-              <div className="absolute md:inset-0 w-full h-full dark:bg-[#0a0a0a] bg-white [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
             </div>
           </div>
 
-          <h1 className="md:mt-1 md:text-2xl text-2xl text-center text-[#042c75] dark:text-white font-semibold">
+          <h1 className="md:text-2xl text-2xl text-center text-[#042c75] dark:text-white font-semibold">
             We find it, You hack it
           </h1>
           <div className="w-fit mx-auto flex flex-col items-center px-6">
             <HoverEffect items={careers} />
             <Card
               text="Add new opening"
-              className="mx-4 text-center mb-4"
+              className="mx-4 text-center mb-4 w-fit"
               onClick={handleShowModal}
             >
               <h1>
