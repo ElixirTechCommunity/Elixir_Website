@@ -42,10 +42,10 @@ function Careers() {
       <div className="flex justify-center items-center">
         <div className="w-full relative">
           <div className="mt-24 h-fit w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <div className="text-[5.5rem] font-bold text-center dark:text-white text-blue-900 relative z-20">
+            <div className="md:text-[5.5rem] text-6xl font-bold text-center dark:text-white text-blue-900 relative z-20">
               Careers
             </div>
-            <div className="md:w-[30rem] w-[20] flex justify-center h-4 relative">
+            <div className="md:w-[30rem] w-full mt-2 flex justify-center h-4 relative">
               {/* Gradients */}
               <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-[2px] w-3/4 blur-sm" />
               <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-px w-3/4" />
