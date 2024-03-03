@@ -10,7 +10,9 @@ const HamburgerMenu: React.FC = () => (
         <div className="flex flex-col justify-center items-center space-y-4">
           <a href="/notes">Notes</a>
           <a href="/events">Events</a>
+          <a href="/careers">Careers</a>
           <a href="/mentors">Mentorship</a>
+
           <a href="/participate">Participate</a>
 
           <a href="#">
@@ -70,7 +72,7 @@ export const Navbar: React.FC = () => {
     <div
       style={{
         position: "sticky",
-        top: 0,
+        top: 8,
         zIndex: 1000,
       }}
     >
@@ -117,6 +119,7 @@ export const Navbar: React.FC = () => {
               <a href="/notes">Notes</a>
               <a href="/events">Events</a>
               <a href="/mentors">Mentorship</a>
+              <a href="/careers">Careers</a>
               <a href="/participate">Participate</a>
             </div>
 
@@ -169,19 +172,8 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="md:flex space-x-8 items-center">
-          <a href="#">
-            <button className="bg-transparent font-m text-gray-800 py-1 px-3 rounded-lg">
-              <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
-              >
+        <div className="md:flex ml-2 items-center">
                 <ModeToggle />
-              </ThemeProvider>
-            </button>
-          </a>
         </div>
 
         {isOpen && <HamburgerMenu />}

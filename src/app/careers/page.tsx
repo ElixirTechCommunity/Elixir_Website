@@ -1,26 +1,79 @@
 "use client";
-import React from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useTheme } from "next-themes";
+import { Card, HoverEffect } from "@/components/careers-card";
+import { AddCareerCard } from "@/components/AddNewCareerCard";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 function Careers() {
+  const [careers, setCareers] = useState([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const { theme } = useTheme();
+
+  const fetchCareers = async () => {
+    try {
+      const careersData = await axios.get(
+        "https://elixir-careers.onrender.com/api/v1/henlo"
+      );
+      setCareers(careersData.data.careerData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchCareers();
+  }, []);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+    if (!showModal) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  };
+
   return (
-    <div className="h-[100vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-          Careers
-        </h1>
-        <p></p>
-        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          If you're interested in getting involved with the community, please enter your email below and we'll keep you updated with the latest news and events.
-        </p>
-        <input
-          type="text"
-          placeholder="hi@elixir"
-          className="p-2 rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder:text-neutral-700"
-        />
+    <>
+      {showModal && <AddCareerCard handleClose={handleShowModal} />}
+      <div className="flex justify-center items-center">
+        <div className="w-full relative">
+          <div className="mt-24 h-fit w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
+            <div className="md:text-[5.5rem] text-6xl font-bold text-center dark:text-white text-blue-900 relative z-20">
+              Careers
+            </div>
+            <div className="md:w-[30rem] w-full mt-2 flex justify-center h-4 relative">
+              {/* Gradients */}
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-[2px] w-3/4 blur-sm" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-800 to-transparent h-px w-3/4" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-indigo-500 via-sky-200 to-transparent h-[5px] w-1/4 blur-sm" />
+              <div className="absolute top-0 bg-gradient-to-r from-transparent dark:via-sky-500 via-sky-800 to-transparent h-px w-1/4" />
+
+            </div>
+          </div>
+
+          <h1 className="md:text-2xl text-2xl text-center text-[#042c75] dark:text-white font-semibold">
+            We find it, You hack it
+          </h1>
+          <div className="w-fit mx-auto flex flex-col items-center px-6">
+            <HoverEffect items={careers} />
+            <Card
+              text="Add new opening"
+              className="mx-4 text-center mb-4 w-fit"
+              onClick={handleShowModal}
+            >
+              <h1>
+                If any new opening is available you can add it here so that
+                other people can see it.
+              </h1>
+            </Card>
+          </div>
+        </div>
       </div>
-      <BackgroundBeams />
-    </div>
+    </>
   );
 }
 
