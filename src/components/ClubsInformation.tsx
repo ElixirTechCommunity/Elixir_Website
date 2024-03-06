@@ -4,61 +4,58 @@ import { PinContainer } from "./ui/3d-pin";
 
 export function ClubsInformation() {
   return (
-    <div className="sm:h-[40rem] w-full flex-col sm:flex-row flex wrap items-evenly justify-center overflow-hidden" >
-       {/* TODO: make this bold and prominent */}
-      <h2 className="text-4xl font-semibold text-black dark:text-white text-center">Our Clubs</h2>
-  
-      <PinContainer
-        title="GeeksforGeeks"
-        // TODO:
-        href="add instagram of club"
-      >
-        <div className="flex basis-full flex-col p-2 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            GeeksforGeeks ABESEC
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
+    <div>
+      <h2 className="text-3xl md:text-[3rem] text-center font-bold mt-9 leading-none whitespace-normal md:whitespace-pre">Our Clubs</h2>
+      <div className="h-[40rem] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/gfg-abesec"
+          href="https://twitter.com/mannupaaji"
+        >
+          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+              GeeksForGeeks ABESEC
+            </h3>
+            <div className="text-base !m-0 !p-0 font-normal">
+              <span className="text-slate-500 ">
+                We talk about Opensource and Development.
+              </span>
+            </div>
+            <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
           </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-        </div>
-      </PinContainer>
-      <PinContainer
-        title="GDSC"
-        // TODO: add links to instagram
-        href="add instagram of club"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Google Developer Student Club
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
+        </PinContainer>
+        <PinContainer
+          title="/gdsc-abesec"
+          href="https://twitter.com/mannupaaji"
+        >
+          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+              GDSC ABESEC
+            </h3>
+            <div className="text-base !m-0 !p-0 font-normal">
+              <span className="text-slate-500 ">
+                We talk about Android Development and Google Cloud.
+              </span>
+            </div>
+            <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
           </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-        </div>
-      </PinContainer>
-      <PinContainer
-        title="Codechef"
-        // TODO:
-        href="add instagram of club"
-      >
-        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-          <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-            Codechef ABESEC
-          </h3>
-          <div className="text-base !m-0 !p-0 font-normal">
-            <span className="text-slate-500 ">
-              Customizable Tailwind CSS and Framer Motion Components.
-            </span>
+        </PinContainer>
+        <PinContainer
+          title="/codechef-abesec"
+          href="https://twitter.com/mannupaaji"
+        >
+          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+            <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+              Codechef ABESEC
+            </h3>
+            <div className="text-base !m-0 !p-0 font-normal">
+              <span className="text-slate-500 ">
+                We talk about DSA and Competitive Programming.
+              </span>
+            </div>
+            <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
           </div>
-          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-        </div>
-      </PinContainer>
+        </PinContainer>
+      </div>
     </div>
   );
 }
