@@ -24,12 +24,12 @@ function JoinCommunity() {
   ];
   return (
     <div className="z-20 flex flex-col items-center justify-center h-[40rem]  ">
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base md:text-lg font-bold">
         You learn more in a community then you do on your own.
       </p>
       <TypewriterEffectSmooth words={words} />
       {/* TODO: add hover effect to buttons */}
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+      <div className="flex flex-row flex-wrap gap-4 justify-center">
         <a href="/participate">
           <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
             Join now
@@ -48,7 +48,7 @@ function JoinCommunity() {
 
 export function JoinUs() {
   return (
-    <div className="p-[6rem]">
+    <div className="w-full h-full p-8">
       <div className="h-96  relative w-full overflow-hidden bg-background flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-background z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <JoinCommunity />

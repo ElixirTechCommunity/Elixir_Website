@@ -1,17 +1,36 @@
 "use client";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
 import React from "react";
 import { ContainerScroll } from "./ui/container-scroll-animation";
-
-const words = `Explore. Learn. Conquer`;
 
 export function HeroSection() {
   return (
     <div className="flex flex-col overflow-hidden">
+
+      {/* Tab for Medium Screen */}
+      <section className="body-font md:hidden">
+        <div className="w-fit mx-auto flex px-5 md:flex-row flex-col items-center">
+          <div className="">
+            <img
+              className="w-80 mx-auto"
+              alt="Phone"
+              src="../iPhone-12-Mockup.png"
+            />
+          </div>
+          <div className="lg:flex-grow pt-6 flex flex-col mb-40 items-center text-center">
+            <h1 className="text-4xl font-bold mt-9 leading-none whitespace-normal text-wrap">
+              ELIXIR TECH COMMUNITY.
+            </h1>
+            <p className="m-4 xl:w-3/4 text-gray-600 text-lg">
+              Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tab for Large Screen */}
       <div className="w-full relative flex items-center justify-center">
         {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-        <div className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-18">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <div className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-18 hidden md:block">
           <ContainerScroll
             users={users}
             titleComponent={

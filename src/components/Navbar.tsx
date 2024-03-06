@@ -76,7 +76,7 @@ export const Navbar: React.FC = () => {
         zIndex: 1000,
       }}
     >
-      <nav className="flex justify-center items-center mt-5">
+      <nav className="flex justify-center items-center mt-5 w-fit mx-auto">
         <div className="max-w-6x1 rounded-2xl overflow-hidden shadow-lg text-white bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
           <div className="py-4  px-4 flex justify-between items-center space-x-12">
             <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>

@@ -14,8 +14,8 @@ function Card({
 }) {
   return (
     <div className="relative w-full h-[300px]">
-      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
-      <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+      <div className="absolute h-full w-full transform" />
+      <div className="relative shadow-xl  border bg-transparent border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
         <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,13 +41,16 @@ function Card({
           {text}
         </p>
 
+
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="border px-4 py-1 rounded-lg border-gray-500 text-gray-300"
+          className="relative z-50"
         >
-          Explore
+          <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+            Explore
+          </button>
         </a>
 
         {/* Meaty part - Meteor effect */}
