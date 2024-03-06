@@ -6,7 +6,7 @@ export function ClubsInformation() {
   return (
     <div>
       <h2 className="text-3xl md:text-[3rem] text-center font-bold mt-9 leading-none whitespace-normal md:whitespace-pre">Our Clubs</h2>
-      <div className="h-[40rem] w-full flex items-center justify-center ">
+      <div className="h-full w-full flex items-center justify-center flex-wrap gap-20 pt-10">
         <PinContainer
           title="/gfg-abesec"
           href="https://twitter.com/mannupaaji"
