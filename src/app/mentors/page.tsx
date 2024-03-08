@@ -43,30 +43,34 @@ function Participate() {
   return (
     <div className="w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <div className="h-auto w-full flex flex-col gap-[3vw] items-center justify-center overflow-hidden rounded-md m-[2vw]">
-        <MentorHeading/>
+        <MentorHeading />
         <div className="text-white">
         <div className="flex flex-row gap-2 justify-center items-center rounded-full relative">
                   <input
                     type="text"
                     className="bg-white text-black font-semibold md:h-10 h-8 md:min-w-[30rem] min-w-[10rem] rounded-full px-4 md:py-4 py-[1.2rem] outline-black-200"
-                    placeholder="Search or categorize mentors"
+                    placeholder="Search "
                     onChange={searchMentors}
                   ></input>
-                  <button className="absolute right-1 bg-gradient-to-r from-indigo-500 to-purple-500 hover:bg-[#490669] flex flex-row gap-2 justify-center items-center md:py-1 p-1 md:px-2 rounded-full" onClick={loadMentor}>      
-                    <span className="md:inline hidden text-white font-semibold"><FaSearch color="white" className="text-lg" /></span>
+                  <button className="absolute right-1 min-w-9 min-h-7 bg-gradient-to-r from-indigo-500 to-purple-500 hover:bg-[#490669] flex flex-row gap-2 justify-center items-center md:py-1 p-1 md:px-2 rounded-full" onClick={loadMentor}>      
+
+                    <span className="text-white font-semibold"><FaSearch color="white" className="text-lg" /></span>
                   </button>
               </div>
         </div>
-        <div className="grid gap-5 grid-cols-7 grid-rows-3">
+
+
+
+        <div className="md:grid md:gap-5 md:grid-cols-7 md:grid-rows-3">
              {techFields.map(techField=>{
               return(
-                <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" onClick={categorize}>
+                <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 m-1" onClick={categorize}>
                   {techField}
                 </button>
               )
              })}
         </div>
-        <div className="grid gap-3 grid-cols-3 grid-rows-auto">
+        <div className="md:grid md:gap-3 md:grid-cols-3 md:grid-rows-auto">
           {mentorData.map((mentor:any)=>{
                 if(inputClick){
                     if(mentor.tech==input){
