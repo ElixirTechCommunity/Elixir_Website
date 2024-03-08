@@ -41,7 +41,7 @@ function Participate() {
     console.log(input)
   }
   return (
-    <div className="w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div className=" p-5 w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <div className="h-auto w-full flex flex-col gap-[3vw] items-center justify-center overflow-hidden rounded-md m-[2vw]">
         <MentorHeading />
         <div className="text-white">
