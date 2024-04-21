@@ -22,8 +22,12 @@ export default function Events(): JSX.Element {
   return (
     events && (
       <Section crosses={true}>
-        <main className='relative antialiased'>
-          <Heading tag='Explore Our Dynamic' title='Events' />
+        <main className='relative antialiased flex flex-col items-center justify-center'>
+          <Heading
+            tag='Explore Our Dynamic'
+            title='Events'
+            className='mt-16 md:mt-0'
+          />
           <div className='flex flex-wrap justify-center items-stretch gap-10 pb-24 max-w-[97vw]'>
             {events?.map((event: Event) => (
               <>
