@@ -49,16 +49,13 @@ const Hero = () => {
             <div className='relative bg-n-8 rounded-[1rem]'>
               <div className='h-[1.4rem] bg-n-10 rounded-t-[0.9rem]' />
 
-              <div className='aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]'>
-                <Image
-                  src={robot}
-                  className='w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]'
-                  width={1024}
-                  height={490}
-                  alt='AI'
-                />
+              <div className='object-cover  rounded-b-[0.9rem] overflow-hidden'>
+                <video controls loop autoPlay preload='auto' muted playsInline>
+                  <source src={"LogoReveal.mp4"} type='video/mp4' />
+                  Your browser does not support the video tag.
+                </video>
 
-                <Generating className='absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2' />
+                {/* <Generating className='absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2' /> */}
 
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className='hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex'>
@@ -73,7 +70,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className='hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex'
-                    title='Code generation'
+                    title='Connect and Learn'
                   />
                 </ScrollParallax>
               </div>
