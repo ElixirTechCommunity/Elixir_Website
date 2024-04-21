@@ -1,15 +1,9 @@
 "use client";
 
 import React, { useState , useRef} from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import sendContactFrom from "@/utils/contact_form";
-import Generating from "@/components/landingPage/Generating";
-import { BackgroundCircles, BottomLine, Gradient } from "@/components/landingPage/design/Hero";
-import { ScrollParallax } from "react-just-parallax";
-import Notification from "@/components/landingPage/Notification";
-import { heroIcons } from "@/utils/constants";
-import Image from "next/image";
-import { GradientLight } from "@/components/landingPage/design/Benefits";
+import { BackgroundCircles } from "@/components/landingPage/design/Hero";
+import { Gradient } from "@/components/landingPage/design/Roadmap";
 
 function Participate() {
     const [name, setName] = useState("");
@@ -50,14 +44,12 @@ function Participate() {
                 </h1>
                 <p></p>
                 <p className="text-neutral-300 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-                <BackgroundCircles parallaxRef={parallaxRef}/>
-                
-                <GradientLight />
                     If you're interested in getting involved with the community,
                     please enter your email below and we'll keep you updated
                     with the latest news and events.
                 </p>
                 <form onSubmit={handleSubmit} className="relative z-10 flex flex-col">
+                <BackgroundCircles parallaxRef={parallaxRef}/>
                     <input
                         type="text"
                         placeholder="Your Name"
@@ -96,6 +88,8 @@ function Participate() {
                         </p>
                     )}
                 </form>
+                <Gradient 
+                />
               </div>
             </div>
             
