@@ -14,27 +14,27 @@ function Participate() {
   const [success, setSuccess] = useState(false);
   const parallaxRef = useRef(null);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setLoading(true);
-        setError(null);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
 
-        try {
-            const response = await sendContactFrom({ name, fromEmail, issue });
-            if (response.error) {
-                setError(response.error);
-            } else {
-                setSuccess(true);
-                setName("");
-                setFromEmail("");
-                setIssue("");
-            }
-        } catch (error) {
-            setError("An error occurred. Please try again later.");
-        }
+    try {
+      const response = await sendContactFrom({ name, fromEmail, issue });
+      if (response.error) {
+        setError(response.error);
+      } else {
+        setSuccess(true);
+        setName("");
+        setFromEmail("");
+        setIssue("");
+      }
+    } catch (error) {
+      setError("An error occurred. Please try again later.");
+    }
 
-        setLoading(false);
-    };
+    setLoading(false);
+  };
 
   return (
     <div className='h-[120vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
