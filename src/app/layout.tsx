@@ -14,23 +14,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='dark'>
+    <html lang="en" className="dark">
       <body
         className={cn(
-          "min-h-screen min-w-screen bg-background font-sans antialiased dark:bg-black bg-white  dark:bg-grid-white/[0.09] bg-grid-black/[0.09]",
-          fontSans.variable
+          "min-h-screen min-w-screen bg-background font-sans antialiased dark:bg-black bg-white  dark:bg-grid-white/[0.00] bg-grid-black/[0.00]",
+          fontSans.variable,
         )}
       >
         <Provider store={appStore}>
           <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
+            attribute="class"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
             {/* <Navbar /> */}
             {children}
-            <Footer />
           </ThemeProvider>
         </Provider>
       </body>

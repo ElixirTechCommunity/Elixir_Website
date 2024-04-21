@@ -17,14 +17,14 @@ import Footer from "@/components/landingPage/Footer";
 export default function Home() {
   useEventApi();
   return (
-    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
+    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Header />
       <Hero />
-      <Benefits />
+      {/* <Benefits /> */}
       <Collaboration />
-      <Services />
-      <Pricing />
+      {/* <Services /> */}
       <Roadmap />
+      <Pricing />
       <Footer />
     </div>
   );
