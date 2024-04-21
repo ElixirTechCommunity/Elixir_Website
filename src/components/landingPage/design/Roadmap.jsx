@@ -1,7 +1,7 @@
 import { gradient } from "@/assets";
 import Image from "next/image";
 
-export const Gradient = ({ top, left }) => {
+export const Gradient = () => {
   return (
     <div
       className={`absolute top-[18.25rem] -left-[30.375rem] w-[56.625rem] opacity-60 mix-blend-color-dodge pointer-events-none`}
