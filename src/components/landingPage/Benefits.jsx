@@ -10,13 +10,12 @@ import Link from "next/link";
 const Benefits = () => {
   return (
     <Section id='features' className="mt-10">
-      <GradientLight/>
+
       <div className='container relative z-2'>
         <Heading
           className='md:max-w-md lg:max-w-2xl font-semibold'
           title='Study Smarter, Not Harder!.'
         />
-          <GradientLight/>
         <div className='flex justify-center flex-wrap gap-10 mb-10'>
           {benefits.map((item) => (
             <div
@@ -26,6 +25,7 @@ const Benefits = () => {
               }}
               key={item.id}
             >
+              <GradientLight/>
               <div className='relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none'>
                 <h5 className='h5 mb-5'>{item.title}</h5>
                 <p className='body-2 mb-6 text-n-3'>{item.text}</p>
@@ -43,7 +43,7 @@ const Benefits = () => {
                 </div>
               </div>
 
-              {item.light && <GradientLight />}
+              {item.light}
 
               <div
                 className='absolute inset-0.5 bg-n-8'
