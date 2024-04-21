@@ -14,21 +14,27 @@ function Participate() {
   const [success, setSuccess] = useState(false);
   const parallaxRef = useRef(null);
 
-    // Create refs for each input field
-    const nameRef = useRef<HTMLInputElement>(null);
-    const fromEmailRef = useRef<HTMLInputElement>(null);
-    const issueRef = useRef<HTMLTextAreaElement>(null);
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
         setError(null);
 
         try {
-            // Access the current value of each input using the ref
-            const name = nameRef.current?.value || "";
-            const fromEmail = fromEmailRef.current?.value || "";
-            const issue = issueRef.current?.value || "";
+            const response = await sendContactFrom({ name, fromEmail, issue });
+            if (response.error) {
+                setError(response.error);
+            } else {
+                setSuccess(true);
+                setName("");
+                setFromEmail("");
+                setIssue("");
+            }
+        } catch (error) {
+            setError("An error occurred. Please try again later.");
+        }
+
+        setLoading(false);
+    };
 
   return (
     <div className='h-[120vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
