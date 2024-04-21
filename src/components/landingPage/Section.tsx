@@ -7,6 +7,13 @@ const Section = ({
   crossesOffset,
   customPaddings,
   children,
+}: {
+  className: string;
+  id: string;
+  crosses: boolean;
+  crossesOffset: number;
+  customPaddings: string;
+  children: React.ReactNode;
 }) => {
   return (
     <div
