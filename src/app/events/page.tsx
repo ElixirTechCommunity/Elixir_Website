@@ -21,9 +21,20 @@ export default function Events(): JSX.Element {
 
   return (
     events && (
-      <Section crosses={true}>
-        <main className='relative antialiased'>
-          <Heading tag='Explore Our Dynamic' title='Events' />
+      <Section
+        crosses={true}
+        className='' // Add appropriate class name here
+        id='' // Add a unique ID here
+        crossesOffset={0} // Adjust according to your design needs
+        customPaddings='' // Add custom padding values here
+      >
+        <main className='relative antialiased flex flex-col items-center justify-center'>
+          <Heading
+            tag='Explore Our Dynamic'
+            title='Events'
+            className='mt-16 md:mt-0'
+            text=''
+          />
           <div className='flex flex-wrap justify-center items-stretch gap-10 pb-24 max-w-[97vw]'>
             {events?.map((event: Event) => (
               <>

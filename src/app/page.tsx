@@ -11,6 +11,7 @@ import Collaboration from "@/components/landingPage/Collaboration";
 // import Services from "@/components/landingPage/Services";
 import Pricing from "@/components/landingPage/Pricing";
 import Roadmap from "@/components/landingPage/Roadmap";
+import Services from "@/components/landingPage/Services";
 
 export default function Home() {
   useEventApi();
@@ -19,9 +20,9 @@ export default function Home() {
       <Hero />
       {/* <Benefits /> */}
       <Collaboration />
+      <Pricing />
       {/* <Services /> */}
       <Roadmap />
-      <Pricing />
     </div>
   );
 }
