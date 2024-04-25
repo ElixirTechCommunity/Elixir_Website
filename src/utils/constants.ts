@@ -37,6 +37,7 @@ import {
   twitter,
   yourlogo,
 } from "@/assets";
+import { url } from "inspector";
 
 export const navigation = [
   {
@@ -246,53 +247,41 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
+    title: "1st Year",
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    iconUrl: "/sticky-notes.png",
+    imageUrl: "/1.png",
+    url: "https://drive.google.com/drive/folders/1TTjSSShjK5nrUURnSIVOK1wnO-CBCp7R"
   },
   {
     id: "1",
-    title: "Improve everyday",
+    title: "2nd Year",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    iconUrl:"/sticky-notes.png",
+    imageUrl: "/2.png",
     light: true,
+    url:"https://drive.google.com/drive/folders/1c2gZ8TJ53P3ecNETMB403lTueQY5pEHU"
   },
   {
     id: "2",
-    title: "Connect everywhere",
+    title: "3rd Year",
     text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
+    iconUrl: "/sticky-notes.png",
+    imageUrl:"/3.png",
+    url:"https://drive.google.com/drive/folders/1jUHgBPZdN5V5Am6gEHpHNTc4XWIQgC_W"
   },
   {
     id: "3",
-    title: "Fast responding",
+    title: "4th Year",
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
+    iconUrl: "/sticky-notes.png",
+    imageUrl: "/4.png",
     light: true,
-  },
-  {
-    id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+    url:"https://drive.google.com/drive/folders/1LdrCdkcasmu_qA0vOK-UdI8UeThNhZ2C"
   },
 ];
 
