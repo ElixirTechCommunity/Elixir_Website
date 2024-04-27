@@ -37,9 +37,6 @@ const Header = () => {
       }`}
     >
       <div className='flex items-center px-5 lg:px-8 xl:px-15 max-lg:py-8 lg:text-xl lg:font-semibold'>
-        {/* <a className='block w-[12rem] xl:mr-8' href='#hero'>
-          <Image src={brainwave} width={190} height={40} alt='Brainwave' />
-        </a> */}
         <Button className='hidden lg:flex lg:text-lg px-5 lg:px-5 xl:px-2 max-lg:py-8' href='/'>
           E L I X I R
         </Button>
@@ -71,13 +68,6 @@ const Header = () => {
 
           <HamburgerMenu />
         </nav>
-
-        {/* <a
-          href='#signup'
-          className='button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block'
-        2
-          New account
-        </a> */}
         <Button className='hidden lg:flex lg:text-lg px-5 lg:px-5 xl:px-2 max-lg:py-8' href='participate'>
           Reach Us
         </Button>
