@@ -6,10 +6,9 @@ import { BackgroundCircles } from "@/components/landingPage/design/Hero";
 import { Gradient } from "@/components/landingPage/design/Roadmap";
 
 function Participate() {
-    const nameRef = useRef(null);
-    const emailRef = useRef(null);
-    const issueRef = useRef(null);
-    const [issue, setIssue] = useState(""); // refactor and use useRef
+    const nameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const issueRef = useRef<HTMLTextAreaElement>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
@@ -33,9 +32,9 @@ function Participate() {
                 setError(response.error);
             } else {
                 setSuccess(true);
-                setName("");
-                setFromEmail("");
-                setIssue("");
+                nameRef.current.value = "";
+                emailRef.current.value = "";
+                issueRef.current.value = "";
             }
         }
         } catch (error) {
