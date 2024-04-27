@@ -56,23 +56,6 @@ export const navigation = [
     title: "Mentors",
     url: "mentors",
   },
-  // {
-  //   id: "3",
-  //   title: "Roadmaps",
-  //   url: "roadmap",
-  // },
-  // {
-  //   id: "4",
-  //   title: "Reach Us",
-  //   url: "participate",
-  //   // onlyMobile: true,
-  // },
-  // {
-  //   id: "5",
-  //   title: "Home",
-  //   // url: "/",
-  //   // onlyMobile: true,
-  // },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -323,10 +306,4 @@ export const socials = [
     iconUrl: linkedin,
     url: "https://www.linkedin.com/company/geeksforgeeks-abesec/",
   },
-  // {
-  //   id: "4",
-  //   title: "Facebook",
-  //   iconUrl: facebook,
-  //   url: "#",
-  // },
 ];
