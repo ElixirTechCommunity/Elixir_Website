@@ -36,10 +36,14 @@ const Header = () => {
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
-      <div className='flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4'>
-        <a className='block w-[12rem] xl:mr-8' href='#hero'>
+      <div className='flex items-center px-5 lg:px-8 xl:px-15 max-lg:py-8 lg:text-xl lg:font-semibold'>
+        {/* <a className='block w-[12rem] xl:mr-8' href='#hero'>
           <Image src={brainwave} width={190} height={40} alt='Brainwave' />
-        </a>
+        </a> */}
+        <Button className='hidden lg:flex lg:text-lg px-5 lg:px-5 xl:px-2 max-lg:py-8' href='/'>
+          E L I X I R
+        </Button>
+        <div/>
 
         <nav
           className={`${
@@ -54,8 +58,8 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
+                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-lg lg:font-semibold ${
+                  item.url === pathname
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
@@ -68,19 +72,18 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
+        {/* <a
           href='#signup'
           className='button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block'
-        >
+        2
           New account
-        </a>
-        <Button className='hidden lg:flex' href='#login'>
-          Sign in
+        </a> */}
+        <Button className='hidden lg:flex lg:text-lg px-5 lg:px-5 xl:px-2 max-lg:py-8' href='participate'>
+          Reach Us
         </Button>
-
         <Button
           className='ml-auto lg:hidden'
-          px='px-3'
+          px='px-1'
           onClick={toggleNavigation}
         >
           <MenuSvg openNavigation={openNavigation} />
