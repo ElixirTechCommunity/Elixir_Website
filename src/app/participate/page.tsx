@@ -49,8 +49,10 @@ function Participate() {
           and events.
         </p>
         <form onSubmit={handleSubmit} className='relative z-10 flex flex-col'>
-          <BackgroundCircles parallaxRef={parallaxRef} />
+          
+          
           <input
+          id="name"
             type='text'
             placeholder='Your Name'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -59,6 +61,7 @@ function Participate() {
             disabled={loading}
           />
           <input
+          id="email"
             type='email'
             placeholder='Your Email'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -86,6 +89,7 @@ function Participate() {
             <p className='text-green-500 mt-2'>Thank you for joining!</p>
           )}
         </form>
+
         <Gradient />
       </div>
     </div>
