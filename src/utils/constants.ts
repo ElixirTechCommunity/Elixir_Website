@@ -1,16 +1,10 @@
 export const EVENT_API =
   "https://elixir-backendv2.vercel.app/events/?format=json";
 import {
-  benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
-  benefitIcon4,
-  benefitImage2,
   chromecast,
   disc02,
   discord,
   discordBlack,
-  facebook,
   figma,
   file02,
   framer,
@@ -237,17 +231,17 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: "/sticky-notes.png",
     imageUrl: "/1.png",
-    url: "https://drive.google.com/drive/folders/1TTjSSShjK5nrUURnSIVOK1wnO-CBCp7R"
+    url: "https://drive.google.com/drive/folders/1TTjSSShjK5nrUURnSIVOK1wnO-CBCp7R",
   },
   {
     id: "1",
     title: "2nd Year",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl:"/sticky-notes.png",
+    iconUrl: "/sticky-notes.png",
     imageUrl: "/2.png",
     light: true,
-    url:"https://drive.google.com/drive/folders/1c2gZ8TJ53P3ecNETMB403lTueQY5pEHU"
+    url: "https://drive.google.com/drive/folders/1c2gZ8TJ53P3ecNETMB403lTueQY5pEHU",
   },
   {
     id: "2",
@@ -255,8 +249,8 @@ export const benefits = [
     text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: "/sticky-notes.png",
-    imageUrl:"/3.png",
-    url:"https://drive.google.com/drive/folders/1jUHgBPZdN5V5Am6gEHpHNTc4XWIQgC_W"
+    imageUrl: "/3.png",
+    url: "https://drive.google.com/drive/folders/1jUHgBPZdN5V5Am6gEHpHNTc4XWIQgC_W",
   },
   {
     id: "3",
@@ -266,7 +260,7 @@ export const benefits = [
     iconUrl: "/sticky-notes.png",
     imageUrl: "/4.png",
     light: true,
-    url:"https://drive.google.com/drive/folders/1LdrCdkcasmu_qA0vOK-UdI8UeThNhZ2C"
+    url: "https://drive.google.com/drive/folders/1LdrCdkcasmu_qA0vOK-UdI8UeThNhZ2C",
   },
 ];
 
