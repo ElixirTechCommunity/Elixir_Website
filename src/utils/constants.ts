@@ -33,44 +33,29 @@ import {
   searchMd,
   slack,
   sliders04,
-  telegram,
+  linkedin,
   twitter,
   yourlogo,
 } from "@/assets";
 import { url } from "inspector";
 
+// import linkedin from '@/assets';
+
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Notes",
+    url: "notes",
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Events",
+    url: "events",
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
-  },
-  {
-    id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
-  },
-  {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
+    title: "Mentors",
+    url: "mentors",
   },
 ];
 
@@ -290,30 +275,24 @@ export const socials = [
     id: "0",
     title: "Discord",
     iconUrl: discordBlack,
-    url: "#",
+    url: "https://discord.com/invite/YN9ZGjXdXK",
   },
   {
     id: "1",
     title: "Twitter",
     iconUrl: twitter,
-    url: "#",
+    url: "https://twitter.com/TheElixirTech",
   },
   {
     id: "2",
     title: "Instagram",
     iconUrl: instagram,
-    url: "#",
+    url: "https://www.instagram.com/geeksforgeeks_abesec/",
   },
   {
     id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
+    title: "LinkedIn",
+    iconUrl: linkedin,
+    url: "https://www.linkedin.com/company/geeksforgeeks-abesec/",
   },
 ];
