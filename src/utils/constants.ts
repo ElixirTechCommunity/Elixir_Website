@@ -51,6 +51,11 @@ export const navigation = [
     title: "Mentors",
     url: "mentors",
   },
+  {
+    id: "3",
+    title: "Participate",
+    url: "participate",
+  },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
