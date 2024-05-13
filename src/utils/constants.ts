@@ -51,11 +51,6 @@ export const navigation = [
     title: "Mentors",
     url: "mentors",
   },
-  {
-    id: "3",
-    title: "Participate",
-    url: "participate",
-  },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -232,7 +227,7 @@ export const benefits = [
   {
     id: "0",
     title: "1st Year",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    text: "Even though it's 11th and 12th all over again, we've got you covered with first-year essentials+ C (iykyk)",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: "/sticky-notes.png",
     imageUrl: "/1.png",
@@ -241,7 +236,7 @@ export const benefits = [
   {
     id: "1",
     title: "2nd Year",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    text: "Familiar with your UNI by now? Here is your cheat-sheet mate as the game's about to get real.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: "/sticky-notes.png",
     imageUrl: "/2.png",
@@ -251,7 +246,7 @@ export const benefits = [
   {
     id: "2",
     title: "3rd Year",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    text: "Your tech-stack matters more than your Notes dump but we know backlogs suck. So you know the rules!",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: "/sticky-notes.png",
     imageUrl: "/3.png",
@@ -260,7 +255,7 @@ export const benefits = [
   {
     id: "3",
     title: "4th Year",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    text: "Study some between your coffee breaks at office. Your handouts for an even shorter preparation. All the best for future big bird!",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: "/sticky-notes.png",
     imageUrl: "/4.png",

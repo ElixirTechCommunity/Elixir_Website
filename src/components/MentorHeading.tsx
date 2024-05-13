@@ -4,10 +4,10 @@ export function MentorHeading() {
   const words = [
     
     {
-        text: "Get",
+        text: "Find",
       },
     {
-        text: "A",
+        text: "Your",
       },
     {
         text: "Mentor",

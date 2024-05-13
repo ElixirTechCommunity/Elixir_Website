@@ -14,7 +14,7 @@ const Benefits = () => {
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl font-semibold"
-          title="Study Smarter, Not Harder!."
+          title="Take A Note(s)"
         />
         <div className="flex justify-center items-center flex-wrap gap-10 mb-10">
           {benefits.map((item) => (

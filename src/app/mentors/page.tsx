@@ -45,6 +45,9 @@ function Participate() {
       <div className="h-auto w-full flex flex-col gap-[3vw] items-center justify-center overflow-hidden rounded-md m-[2vw]">
         <MentorHeading />
         <div className="text-white">
+            <div>
+            Don't worry! We don't take Guru Dakshina
+            </div>
         <div className="flex flex-row gap-2 justify-center items-center rounded-full relative">
                   <input
                     type="text"
