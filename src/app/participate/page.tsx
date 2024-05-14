@@ -38,19 +38,19 @@ function Participate() {
 
   return (
     <div className='h-[120vh] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased'>
-      <div className='max-w-2xl mx-auto p-4' ref={parallaxRef}>
-        <h1 className='relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold'>
+      <div className='md:max-w-2xl mx-auto p-4' ref={parallaxRef}>
+        <h1 className='relative z-10 mt-12 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold'>
           Join The Community
         </h1>
         <p></p>
-        <p className='text-neutral-300 max-w-lg mx-auto my-2 text-sm text-center relative z-10'>
-          If you're interested in getting involved with the community, please
-          enter your email below and we'll keep you updated with the latest news
-          and events.
+        <p className='text-neutral-300 md:max-w-lg mx-auto my-2 text-sm text-center relative z-10'>
+          Stay in the loop with our latest news and events. Sign up below to join our community.
         </p>
         <form onSubmit={handleSubmit} className='relative z-10 flex flex-col'>
-          <BackgroundCircles parallaxRef={parallaxRef} />
+          
+          
           <input
+          id="name"
             type='text'
             placeholder='Your Name'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -59,6 +59,7 @@ function Participate() {
             disabled={loading}
           />
           <input
+          id="email"
             type='email'
             placeholder='Your Email'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -86,6 +87,9 @@ function Participate() {
             <p className='text-green-500 mt-2'>Thank you for joining!</p>
           )}
         </form>
+        {/* <div className="z-[-1]">
+          <BackgroundCircles parallaxRef={parallaxRef} />
+          </div> */}
         <Gradient />
       </div>
     </div>
