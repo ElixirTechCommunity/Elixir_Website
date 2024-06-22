@@ -1,19 +1,19 @@
 "use client";
 import React from "react";
-// import HeroSection from "@/components/HeroSection";
-// import ClubsInformation from "@/components/ClubsInformation";
-// import { JoinUs } from "@/components/JoinUs";
-// import { ElixirTabs } from "@/components/ElixirTabs";
 import useEventApi from "@/hooks/useEventApi";
-import Hero from "@/components/landingPage/Hero";
-// import Benefits from "@/components/landingPage/Benefits";
-import Collaboration from "@/components/landingPage/Collaboration";
-// import Services from "@/components/landingPage/Services";
-import Pricing from "@/components/landingPage/Pricing";
-import Roadmap from "@/components/landingPage/Roadmap";
-import Services from "@/components/landingPage/Services";
+import RetroGrid from "@/components/magicui/retro-grid";
+import { TextRevealDemo } from "@/components/TextReveal";
+import { FadeTextDemo } from "@/components/FadeText";
 
 export default function Home() {
   useEventApi();
-  return <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden h-screen'></div>;
+  return (
+    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden h-screen'>
+      <div className='flex items-center justify-center mt-48'>
+        {/* <TextRevealDemo /> */}
+        <FadeTextDemo />
+      </div>
+      <RetroGrid />
+    </div>
+  );
 }

@@ -2,10 +2,10 @@
 import { fontSans } from "./font";
 import "./globals.css";
 import { cn } from "@/utils/cn";
-import Header from "@/components/landingPage/Header";
-import Footer from "@/components/landingPage/Footer";
+import Footer from "@/components/Footer";
 import { Provider } from "react-redux";
 import appStore from "@/store/store";
+import RetroGrid from "@/components/magicui/retro-grid";
 
 export default function RootLayout({
   children,
@@ -14,14 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='dark'>
-      <body
-        className={cn(
-          "min-h-screen min-w-screen  font-sans antialiased  bg-dot-white/[0.05]",
-          fontSans.variable
-        )}
-      >
+      <body className={cn("min-h-screen min-w-screen  font-sans antialiased  ", fontSans.variable)}>
         <Provider store={appStore}>
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </Provider>
