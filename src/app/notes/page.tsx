@@ -1,16 +1,9 @@
 "use client";
 
 import React from "react";
-import { Meteors } from "@/components/ui/meteors";
-import Benefits from "@/components/landingPage/Benefits";
+import Benefits from "./components/Benefits";
 
 function Notes() {
-
-
-  return(
-    <Benefits/>
-  )
-
+  return <Benefits />;
 }
-
 export default Notes;

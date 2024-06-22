@@ -15,14 +15,5 @@ import Services from "@/components/landingPage/Services";
 
 export default function Home() {
   useEventApi();
-  return (
-    <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden'>
-      <Hero />
-      {/* <Benefits /> */}
-      <Collaboration />
-      <Pricing />
-      {/* <Services /> */}
-      <Roadmap />
-    </div>
-  );
+  return <div className='pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden h-screen'></div>;
 }

@@ -2,8 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import sendContactFrom from "@/utils/contact_form";
-import { BackgroundCircles } from "@/components/landingPage/design/Hero";
-import { Gradient } from "@/components/landingPage/design/Roadmap";
+import { Gradient } from "./components/Roadmap";
 
 function Participate() {
   const [name, setName] = useState("");
@@ -47,10 +46,8 @@ function Participate() {
           Stay in the loop with our latest news and events. Sign up below to join our community.
         </p>
         <form onSubmit={handleSubmit} className='relative z-10 flex flex-col'>
-          
-          
           <input
-          id="name"
+            id='name'
             type='text'
             placeholder='Your Name'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -59,7 +56,7 @@ function Participate() {
             disabled={loading}
           />
           <input
-          id="email"
+            id='email'
             type='email'
             placeholder='Your Email'
             className='p-2 rounded-lg border border-gray-500 focus:ring-2 focus:ring-teal-500 w-full mt-4 bg-neutral-950 placeholder:text-neutral-700 text-white'
@@ -83,9 +80,7 @@ function Participate() {
             {loading ? "Submitting..." : "Submit"}
           </button>
           {error && <p className='text-red-500 mt-2'>{error}</p>}
-          {success && (
-            <p className='text-green-500 mt-2'>Thank you for joining!</p>
-          )}
+          {success && <p className='text-green-500 mt-2'>Thank you for joining!</p>}
         </form>
         {/* <div className="z-[-1]">
           <BackgroundCircles parallaxRef={parallaxRef} />

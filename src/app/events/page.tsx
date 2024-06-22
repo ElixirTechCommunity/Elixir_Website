@@ -1,8 +1,8 @@
 "use client";
-import EventsCard from "@/components/EventsCard3D";
-import { Gradient } from "@/components/landingPage/design/Roadmap";
-import Heading from "@/components/landingPage/Heading";
-import Section from "@/components/landingPage/Section";
+import EventsCard from "./components/EventsCard3D";
+import { Gradient } from "./components/Roadmap";
+import Heading from "./components/Heading";
+import Section from "./components/Section";
 import useEventApi from "@/hooks/useEventApi";
 import { useSelector } from "react-redux";
 type Event = {
@@ -29,12 +29,7 @@ export default function Events(): JSX.Element {
         customPaddings='' // Add custom padding values here
       >
         <main className='relative antialiased flex flex-col items-center justify-center'>
-          <Heading
-            tag='Explore Our Dynamic'
-            title='Events'
-            className='mt-16 md:mt-0'
-            text=''
-          />
+          <Heading tag='Explore Our Dynamic' title='Events' className='mt-16 md:mt-0' text='' />
           <div className='flex flex-wrap justify-center items-stretch gap-10 pb-24 max-w-[97vw]'>
             {events?.map((event: Event) => (
               <>
